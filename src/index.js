@@ -1,5 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import "bootstrap/dist/css/bootstrap.css";
+import CartList from "./components/cartLists";
 
-const element = <h1>THIS IS A TEST</h1>;
-ReactDOM.render(element, document.getElementById("root"));
+ReactDOM.render(<CartList />, document.getElementById("root"));
+
+serviceWorker.unregister();
