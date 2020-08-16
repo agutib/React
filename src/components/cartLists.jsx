@@ -11,11 +11,25 @@ class CartList extends Component {
       { id: 5, value: 0 },
     ],
   };
+
+  onDeleteListener = (cartListID) => {
+    const cartLists = this.state.cartLists.filter(
+      (count) => count.id !== cartListID
+    );
+    this.setState({ cartLists });
+  };
   render() {
     return (
       <div>
-        {this.state.cartLists.map((counter) => (
-          <Cart key={counter.id} value={counter.value} id={counter.id}></Cart>
+        {this.state.cartLists.map((cartLists) => (
+          //all the attributes below are part of the prop that input to the component
+          // i cant access to the state of this component
+          <Cart
+            onDelete={this.onDeleteListener}
+            key={cartLists.id}
+            value={cartLists.value}
+            id={cartLists.id}
+          ></Cart>
         ))}
       </div>
     );

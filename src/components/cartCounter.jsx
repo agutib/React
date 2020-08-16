@@ -1,17 +1,12 @@
 import React, { Component } from "react";
 
-/* export default class cartValue extends Component {
-  // state = {}
-
-  render() {
-    return <h1>This is a Test</h1>;
-  }
-}*/
-
 class Cart extends Component {
   //any data that components needs
+  //state - i can give data which is local or private to that component. i cannot access the state it is completely internal to that component.
+  //prop - is a data that i can give to the component prop are read-only, it cannot change input to other component from its component.
   state = {
     cartValue: this.props.value,
+
     lists: ["Item-01", "Item-02", "Item-03", "Item-04"],
     imageURL: "https://img.icons8.com/nolan/64/shopping-cart.png",
   };
@@ -40,6 +35,12 @@ class Cart extends Component {
           className="btn btn-secondary btn-sm"
         >
           -
+        </button>
+        <button
+          onClick={() => this.props.onDelete(this.props.id)}
+          className="btn btn-danger btn-sm m-2"
+        >
+          Delete
         </button>
         <br></br>
       </React.Fragment>
