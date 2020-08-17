@@ -6,6 +6,6 @@ import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 import CartList from "./components/cartLists";
 
-ReactDOM.render(<CartList />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 serviceWorker.unregister();
