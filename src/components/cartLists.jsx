@@ -4,7 +4,7 @@ import Cart from "./cartCounter";
 class CartList extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         {this.props.cartLists.map((cartLists) => (
           //all the attributes below are part of the prop that input to the component
           // i cant access to the state of this component
@@ -15,7 +15,7 @@ class CartList extends Component {
             id={cartLists.id}
           ></Cart>
         ))}
-      </div>
+      </React.Fragment>
     );
   }
 }

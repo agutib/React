@@ -13,7 +13,7 @@ class NavBar extends Component {
             alt=""
             loading="lazy"
           />
-          Navbar
+          Cart
           <span className="badge badge-pill badge-primary m-2">
             {this.props.totalOrders}
           </span>
