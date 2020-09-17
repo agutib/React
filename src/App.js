@@ -29,6 +29,7 @@ class App extends Component {
         <NavBar
           totalOrders={this.state.cartLists.filter((c) => c.value > 0).length}
         />
+        <button className="btn btn-primary btn-sm m-2">Reset</button>
         <main className="container">
           <CartList
             cartLists={this.state.cartLists}

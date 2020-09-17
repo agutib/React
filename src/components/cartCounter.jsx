@@ -19,10 +19,12 @@ class Cart extends Component {
     //let repeatedClasses = this.badgeModifier();
 
     return (
-      <React.Fragment>
+      <div>
         {/*{this.props.children}*/}
+
         <h4>Item No. {this.props.id}</h4>
         <span className={this.badgeModifier()}>{this.formatCart()}</span>
+
         <button
           //onClick={this.addOnClickListener}
           onClickCapture={this.addOnClickListener}
@@ -43,7 +45,7 @@ class Cart extends Component {
           Delete
         </button>
         <br></br>
-      </React.Fragment>
+      </div>
     );
   }
   addOnClickListener = () => {
